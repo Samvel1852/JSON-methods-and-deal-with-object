@@ -8,6 +8,8 @@ let shuffledObject = {
   address2: "Abovyan 24",
   email3: "hgsfdfetydftyf@ua.fm",
   address3: "Hanrapetutyan 14",
+  address12: "Khorenatsi 4",
+  email13: "uhgdfryugeyug@mail.ru",
 };
 
 function optimazeObject(inpObj) {
@@ -28,11 +30,13 @@ function optimazeObject(inpObj) {
       key[key.length - 1] === "8" ||
       key[key.length - 1] === "9"
     ) {
-      if (key[key.length - 2] === "s") {
-        key = key.slice(0, key.length - 1) + "es";
+      let digitsCount = key.split(/[A-Z a-z]/).join("").length;
+      // console.log(digitsCount);
+      if (key[key.length - digitsCount - 1] === "s") {
+        key = key.slice(0, key.length - digitsCount) + "es";
         // console.log(typeof key, key, 0);
       } else {
-        key = key.slice(0, key.length - 1) + "s";
+        key = key.slice(0, key.length - digitsCount) + "s";
       }
       if (acc.hasOwnProperty(key)) {
         // console.log(key, 1);
