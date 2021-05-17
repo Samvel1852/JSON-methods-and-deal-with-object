@@ -30,5 +30,5 @@ function groupBy(array, fn) {
   return resObj;
 }
 
-console.log(groupBy(["one", "two", "three"], (i) => i.length));
+console.log(groupBy(["one", "two", "three", "below", "ten"], (i) => i.length));
 // console.log();
